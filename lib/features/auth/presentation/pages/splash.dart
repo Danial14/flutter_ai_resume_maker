@@ -25,12 +25,14 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text("AI Resume Builder",
+        child: /*Text("AI Resume Builder",
         style: TextStyle(
           fontWeight: FontWeight.bold,
           fontSize: 22
         ),
-        ),
+        )*/
+        Image.asset("assets/images/logo_ai_resume_builder.png")
+        ,
       ),
     );
   }
