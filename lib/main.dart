@@ -1,4 +1,5 @@
 import 'package:ai_resume_builder/features/auth/presentation/pages/splash.dart';
+import 'package:ai_resume_builder/features/resume/presentation/pages/create_resume.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AI Resume Builder',
-      home: SplashPage(),
+      home: CreateResumePage(),
     );
   }
 }

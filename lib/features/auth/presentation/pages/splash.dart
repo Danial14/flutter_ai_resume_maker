@@ -1,3 +1,4 @@
+import 'package:ai_resume_builder/features/dashboard/presentation/pages/dashboard_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +18,8 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(Duration(seconds: 2), (){
       Get.off((){
-        return LoginPage();
+        //return LoginPage();
+        return DashboardPage();
       });
     });
   }
