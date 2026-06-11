@@ -13,9 +13,19 @@ class ResumeController extends GetxController{
 
   Future<bool> goToEducation() async{
     if(formKey.currentState!.validate()){
+      clearFields();
       return true;
     }
     return false;
+  }
+  void clearFields(){
+    fullNameController.clear();
+    emailController.clear();
+    phoneController.clear();
+    summaryController.clear();
+    addressController.clear();
+    linkedinController.clear();
+    githubController.clear();
   }
   @override
   void onClose() {
