@@ -97,7 +97,16 @@ class EducationForm extends StatelessWidget {
                 );
             },
             );
-          })
+          }),
+          const SizedBox(height: 16,),
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: (){},
+              child: Text("Next"),
+            ),
+          )
         ],
       ),
     );
