@@ -87,8 +87,50 @@ class ExperienceForm extends StatelessWidget {
             },
           ),
           const SizedBox(height: 16,),
+          SizedBox(
+            width: size.width * 0.4,
+            height: 50,
+            child: ElevatedButton(onPressed: experienceController.addExperience,
+            child: const Text("Add Experience"),
+            ),
+          ),
+          const SizedBox(height: 16,),
+          Obx((){
+            if(experienceController.experiences.isEmpty){
+              return const SizedBox();
+            }
+            return ListView.builder(
+              shrinkWrap: true,
+              itemCount: experienceController.experiences.length,
+              itemBuilder: (context, position){
+                final experience = experienceController.experiences[position];
+                return Card(
+                  child: ListTile(
+                    title: Text(experience.position),
+                    subtitle: Text("${experience.companyName}\n"
+                        "${experience.startDate} - ${experience.endDate}"),
+                    trailing: IconButton(
+                      icon: const Icon(Icons.delete,
+                      color: Colors.red,
+                      ),
+                      onPressed: (){
+                        experienceController.removeExperience(position);
+                      },
+                    ),
+                  ),
+                );
+              },
 
-
+            );
+          }),
+          const SizedBox(height: 16,),
+          SizedBox(
+            width: size.width * 0.4,
+            height: 50,
+            child: ElevatedButton(onPressed: (){
+              // Navigate to skills page
+            }, child: const Text("Next")),
+          )
         ],
       ),
     );

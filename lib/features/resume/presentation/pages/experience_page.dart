@@ -1,4 +1,5 @@
 import 'package:ai_resume_builder/features/resume/presentation/controllers/experience_controller.dart';
+import 'package:ai_resume_builder/features/resume/presentation/widgets/experience_form.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,6 +15,7 @@ class ExperiencePage extends StatelessWidget {
       ),
       body: SafeArea(child: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
+        child: ExperienceForm(),
       )),
     );
   }

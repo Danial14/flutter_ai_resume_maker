@@ -24,6 +24,9 @@ class ExperienceController extends GetxController{
     ));
     clearFields();
   }
+  void removeExperience(int position){
+    experiences.removeAt(position);
+  }
   @override
   void onClose() {
     // TODO: implement onClose
